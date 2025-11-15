@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="m-0 p-0 h-screen w-full cursor-default bg-cover bg-center overflow-y-scroll scrollbar-hide" 
+style="background-image: url('Assets/BG Web.png');">
+
+  <!-- Navbar (transparent on top of background) -->
+  <nav class="w-full flex items-center justify-end px-6 py-4 absolute top-0 left-0 border-b border-white">
+    <ul class="flex gap-10 text-white text-xl font-extralight tracking-widest my-3 mx-10">
+      <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Home</li>
+      <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">About</li>
+      <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Contact</li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="grid grid-cols-2 items-start h-screen w-full text-white">
+    <h1 class="text-left text-[16rem] font-bold mx-16 mt-[25rem]">RAPE</h1>
+    <h1 class="text-right text-[16rem] font-bold mx-10 mt-[25rem]">CASES</h1>
+  </section>
+
+  <!-- NEW SECTION WITH CARD -->
+  <section class="w-full bg-white py-20 px-10">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <!-- Card -->
+      <div class="bg-gray-100 shadow-lg rounded-xl p-8">
+        <h2 class="text-3xl font-bold mb-4">Lorem Ipsum Title</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit
+          ligula nec lectus fermentum, a consequat lorem vulputate. Vivamus euismod
+          magna vel dolor fermentum, non porttitor nisi aliquam. Suspendisse vel
+          pellentesque sapien, non ultricies est. Integer nec odio id neque
+          fermentum viverra.
+        </p>
+      </div>
+
+      <!-- Description -->
+      <div class="flex flex-col justify-center">
+        <h3 class="text-2xl font-semibold mb-4">Description</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
+          feugiat odio. Donec consequat sapien et urna efficitur, vitae tincidunt
+          arcu ultrices. Pellentesque et neque sit amet dolor accumsan iaculis.
+          Aenean dapibus efficitur sem, non ultricies tortor bibendum id.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
