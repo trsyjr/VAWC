@@ -11,3 +11,72 @@ body {
   width: 0 !important;
   height: 0 !important;
 }
+
+/* Base line style */
+.hamburger-line {
+  width: 28px;
+  height: 3px;
+  background: white;
+  display: block;
+  border-radius: 3px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Line positions */
+.top-line {
+  transform: translateY(-8px);
+}
+.middle-line {
+  transform: translateY(0px);
+}
+.bottom-line {
+  transform: translateY(8px);
+}
+
+/* ANIMATED TOGGLE STATE */
+#menuBtn.active .top-line {
+  transform: translateY(0px) rotate(45deg);
+}
+#menuBtn.active .middle-line {
+  opacity: 0;
+}
+#menuBtn.active .bottom-line {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.case-folder {
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-folder:hover {
+  border: 1px solid black !important;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Smooth dropdown animation */
+.case-content {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+   
+.folder-card {
+  border: 2px solid transparent;
+  transition: border-color .2s ease;
+}
+.folder-card:hover {
+  border-color: black;
+}
+
+.dropdown-content {
+  transition: height .35s ease, opacity .3s ease, padding .3s ease;
+  overflow: hidden;
+}
