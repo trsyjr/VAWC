@@ -1,8 +1,11 @@
+/* style.css - keep your original styles; only necessary changes shown */
+
+/* Hide scrollbar */
 .scrollbar-hide,
 html,
 body {
-  scrollbar-width: none !important;      /* Firefox */
-  -ms-overflow-style: none !important;   /* IE 10+ */
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
 
 /* Chrome, Edge, Safari */
@@ -12,7 +15,7 @@ body {
   height: 0 !important;
 }
 
-/* Base line style */
+/* Base line style for hamburger */
 .hamburger-line {
   width: 28px;
   height: 3px;
@@ -24,17 +27,18 @@ body {
 }
 
 /* Line positions */
-.top-line {
-  transform: translateY(-8px);
-}
-.middle-line {
-  transform: translateY(0px);
-}
-.bottom-line {
-  transform: translateY(8px);
+.top-line { transform: translateY(-8px); }
+.middle-line { transform: translateY(0px); }
+.bottom-line { transform: translateY(8px); }
+
+.global-bg {
+  background-image: url('Assets/backdrop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* ANIMATED TOGGLE STATE */
+/* Animated toggle state */
 #menuBtn.active .top-line {
   transform: translateY(0px) rotate(45deg);
 }
@@ -51,23 +55,35 @@ body {
 
 .case-folder:hover {
   border: 1px solid black !important;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .arrow {
   transition: transform 0.3s ease;
 }
 
-/* Smooth dropdown animation */
+/* FINAL accordion animation */
+/* removed 'hidden' usage — rely on height/opacity transitions */
 .case-content {
-  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  padding-top: 0 !important;
+  transition: height 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
 }
 
+.case-content.open {
+  opacity: 1;
+  padding-top: 1rem !important;
+  /* height will be set dynamically in JS */
+}
+
+/* Remove unused keyframes unless needed elsewhere */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-   
+
 .folder-card {
   border: 2px solid transparent;
   transition: border-color .2s ease;
@@ -79,4 +95,9 @@ body {
 .dropdown-content {
   transition: height .35s ease, opacity .3s ease, padding .3s ease;
   overflow: hidden;
+}
+
+/* rotate class for arrow transform (using Tailwind utility 'rotate-180' would do same) */
+.rotate-180 {
+  transform: rotate(180deg) !important;
 }

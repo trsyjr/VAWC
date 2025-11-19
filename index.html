@@ -31,7 +31,7 @@
   <!-- DESKTOP NAV LINKS -->
   <ul id="navLinks"
       class="hidden md:flex gap-6 lg:gap-10 text-white text-base lg:text-xl font-extralight tracking-widest 
-             transition-all duration-300">
+             transition-all duration-300 my-5">
     <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Home</li>
     <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Cases</li>
     <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Contact</li>
@@ -53,54 +53,48 @@
   <!-- HERO SECTION -->
   <section
     class="grid grid-cols-1 lg:grid-cols-2 items-center w-full text-white bg-cover bg-center pt-48 pb-10"
-    style="background-image: url('Assets/BG Web.png'); min-height: 100vh;"
-  >
-
-    <h1 class="text-left text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[15rem] xl:text-[16rem] font-bold mx-4 md:mx-10 lg:mx-16">
-      RAPE
-    </h1>
-
-    <h1 class="text-right text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[15rem] xl:text-[16rem] font-bold mx-4 md:mx-10 lg:mx-10">
-      CASES
-    </h1>
-
+    style="background-image: url('Assets/Cover.jpg'); min-height: 100vh;">
   </section>
 
-  <!-- CASES SECTION -->
-  <section class="w-full py-16 px-4 md:px-10 bg-[#FFF8F0]">
-    <h1 class="text-center text-[2rem] md:text-[4rem] lg:text-[5rem] font-bold my-10 md:my-16">
+  <div class="global-bg">
+
+    <!-- CASES SECTION -->
+    <!-- CASES SECTION -->
+  <section class="w-full py-16 px-4 md:px-10">
+    <h1 class="text-center text-[2rem] md:text-[4rem] lg:text-[5rem] text-white font-bold my-10 md:my-16">
       "It Was Never About the Clothes"
     </h1>
 
     <div class="w-full max-w-[1600px] mx-auto space-y-10">
 
       <!-- ========== CASE 1 ========== -->
-      <div class="case-folder border border-black rounded-md bg-[#FFFBEA]">
-        <button class="case-header w-full flex items-center justify-between p-4 md:p-6"
-                data-target="1">
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900">Case 1</h2>
-          <i id="arrow-1" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
-        </button>
+      <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
+      <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
+                data-target="1" aria-expanded="false">
+        <span class="text-2xl md:text-3xl font-bold text-white">Case 1</span>
+        <i id="arrow-1" class="bx bx-chevron-down text-3xl md:text-4xl transition-transform"></i>
+      </button>
 
-        <div id="content-1" class="case-content hidden px-4 md:px-8 pb-10 pt-2">
+        <!-- NOTE: removed Tailwind 'hidden' so CSS/JS height animation works -->
+        <div id="content-1" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
 
           <span class="block w-20 h-1 bg-orange-500 rounded-full mb-8"></span>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div>
-              <p class="text-gray-500 text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
+              <p class="text-white text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
 
               <div class="swiper mySwiper1 w-full max-h-80">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Cover.jpg" class="h-72 object-contain">
+                    <img src="Assets/Cover.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image2.jpg" class="h-72 object-contain">
+                    <img src="Assets/image2.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image3.jpg" class="h-72 object-contain">
+                    <img src="Assets/image3.jpg" class="h-72 object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -108,16 +102,16 @@
             </div>
 
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-gray-800">Case Summary</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">
+              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">
                 This is a sample description that appears in all cases.
               </p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Details</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Aenean dapibus efficitur sem...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
+              <p class="text-white leading-relaxed mb-4">Aenean dapibus efficitur sem...</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Action Taken</h3>
-              <p class="text-gray-700 leading-relaxed">Suspendisse vel pellentesque sapien...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
+              <p class="text-white leading-relaxed">Suspendisse vel pellentesque sapien...</p>
             </div>
 
           </div>
@@ -125,14 +119,14 @@
       </div>
 
       <!-- ========== CASE 2 ========== -->
-      <div class="case-folder border border-black rounded-md bg-[#FFFBEA]">
-        <button class="case-header w-full flex items-center justify-between p-4 md:p-6"
-                data-target="2">
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900">Case 2</h2>
+      <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
+        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
+                data-target="2" aria-expanded="false">
+          <h2 class="text-2xl md:text-4xl font-bold text-white">Case 2</h2>
           <i id="arrow-2" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
         </button>
 
-        <div id="content-2" class="case-content hidden px-4 md:px-8 pb-10 pt-2">
+        <div id="content-2" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
 
           <span class="block w-20 h-1 bg-orange-500 rounded-full mb-8"></span>
 
@@ -144,13 +138,13 @@
               <div class="swiper mySwiper2 w-full max-h-80">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Cover.jpg" class="h-72 object-contain">
+                    <img src="Assets/Cover.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image2.jpg" class="h-72 object-contain">
+                    <img src="Assets/image2.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image3.jpg" class="h-72 object-contain">
+                    <img src="Assets/image3.jpg" class="h-72 object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -158,16 +152,16 @@
             </div>
 
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-gray-800">Case Summary</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">
+              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">
                 Sample description text for Case 2.
               </p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Details</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
+              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Action Taken</h3>
-              <p class="text-gray-700 leading-relaxed">Nulla facilisi. Donec dignissim...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
+              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
             </div>
 
           </div>
@@ -176,14 +170,14 @@
       </div>
 
       <!-- ========== CASE 3 ========== -->
-      <div class="case-folder border border-black rounded-md bg-[#FFFBEA]">
-        <button class="case-header w-full flex items-center justify-between p-4 md:p-6"
-                data-target="3">
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900">Case 3</h2>
+      <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
+        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
+                data-target="3" aria-expanded="false">
+          <h2 class="text-2xl md:text-4xl font-bold text-white">Case 3</h2>
           <i id="arrow-3" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
         </button>
 
-        <div id="content-3" class="case-content hidden px-4 md:px-8 pb-10 pt-2">
+        <div id="content-3" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
 
           <span class="block w-20 h-1 bg-orange-500 rounded-full mb-8"></span>
 
@@ -195,13 +189,13 @@
               <div class="swiper mySwiper3 w-full max-h-80">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Cover.jpg" class="h-72 object-contain">
+                    <img src="Assets/Cover.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image2.jpg" class="h-72 object-contain">
+                    <img src="Assets/image2.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image3.jpg" class="h-72 object-contain">
+                    <img src="Assets/image3.jpg" class="h-72 object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -209,14 +203,14 @@
             </div>
 
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-gray-800">Case Summary</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Sample text for Case 3.</p>
+              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">Sample text for Case 3.</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Details</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
+              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Action Taken</h3>
-              <p class="text-gray-700 leading-relaxed">Nulla facilisi. Donec dignissim...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
+              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
             </div>
 
           </div>
@@ -225,14 +219,14 @@
       </div>
 
       <!-- ========== CASE 4 ========== -->
-      <div class="case-folder border border-black rounded-md bg-[#FFFBEA]">
-        <button class="case-header w-full flex items-center justify-between p-4 md:p-6"
-                data-target="4">
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900">Case 4</h2>
+      <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
+        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
+                data-target="4" aria-expanded="false">
+          <h2 class="text-2xl md:text-4xl font-bold text-white">Case 4</h2>
           <i id="arrow-4" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
         </button>
 
-        <div id="content-4" class="case-content hidden px-4 md:px-8 pb-10 pt-2">
+        <div id="content-4" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
 
           <span class="block w-20 h-1 bg-orange-500 rounded-full mb-8"></span>
 
@@ -244,13 +238,13 @@
               <div class="swiper mySwiper4 w-full max-h-80">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Cover.jpg" class="h-72 object-contain">
+                    <img src="Assets/Cover.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image2.jpg" class="h-72 object-contain">
+                    <img src="Assets/image2.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image3.jpg" class="h-72 object-contain">
+                    <img src="Assets/image3.jpg" class="h-72 object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -258,14 +252,14 @@
             </div>
 
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-gray-800">Case Summary</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Sample text for Case 4.</p>
+              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">Sample text for Case 4.</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Details</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
+              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Action Taken</h3>
-              <p class="text-gray-700 leading-relaxed">Nulla facilisi. Donec dignissim...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
+              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
             </div>
 
           </div>
@@ -274,14 +268,14 @@
       </div>
 
       <!-- ========== CASE 5 ========== -->
-      <div class="case-folder border border-black rounded-md bg-[#FFFBEA]">
-        <button class="case-header w-full flex items-center justify-between p-4 md:p-6"
-                data-target="5">
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900">Case 5</h2>
+      <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
+        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
+                data-target="5" aria-expanded="false">
+          <h2 class="text-2xl md:text-4xl font-bold text-white">Case 5</h2>
           <i id="arrow-5" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
         </button>
 
-        <div id="content-5" class="case-content hidden px-4 md:px-8 pb-10 pt-2">
+        <div id="content-5" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
 
           <span class="block w-20 h-1 bg-orange-500 rounded-full mb-8"></span>
 
@@ -293,13 +287,13 @@
               <div class="swiper mySwiper5 w-full max-h-80">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Cover.jpg" class="h-72 object-contain">
+                    <img src="Assets/Cover.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image2.jpg" class="h-72 object-contain">
+                    <img src="Assets/image2.jpg" class="h-72 object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/image3.jpg" class="h-72 object-contain">
+                    <img src="Assets/image3.jpg" class="h-72 object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -307,14 +301,14 @@
             </div>
 
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-gray-800">Case Summary</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Sample text for Case 5.</p>
+              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">Sample text for Case 5.</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Details</h3>
-              <p class="text-gray-700 leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
+              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
 
-              <h3 class="text-xl font-semibold mb-2 text-gray-800">Action Taken</h3>
-              <p class="text-gray-700 leading-relaxed">Nulla facilisi. Donec dignissim...</p>
+              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
+              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
             </div>
 
           </div>
@@ -324,95 +318,95 @@
 
     </div>
   </section>
+  
+  <hr class="border-gray-300 my-8 w-[85%] mx-auto" />
 
- <!-- ================= CONTACT HOTLINES SECTION ================= -->
-<section class="w-full py-20 px-4 md:px-16 bg-[#FFF8F0] relative">
- <!-- Decorative separation lines -->
-<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[75rem] h-1 bg-black rounded-full"></div>
+  <!-- ================= CONTACT HOTLINES SECTION ================= -->
+  <section class="w-full py-20 px-4 md:px-16 relative">
+    <h1 class="text-center text-white text-3xl sm:text-4xl md:text-[4rem] font-bold mb-16 mt-12">
+      Contact Hotlines
+    </h1>
 
-  <h1 class="text-center text-3xl sm:text-4xl md:text-[4rem] font-bold mb-16 mt-12">
-    Contact Hotlines for Sexual Abuse / Rape Cases
-  </h1>
+    <div class="max-w-[1200px] mx-auto space-y-16">
 
-  <div class="max-w-[1200px] mx-auto space-y-16">
-
-    <!-- Emergency and Law Enforcement -->
-    <div class="bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl shadow-lg p-10 md:grid md:grid-cols-3 md:gap-8 items-start hover:scale-105 transition-transform duration-300">
-      <h2 class="text-2xl md:text-3xl font-bold text-orange-600 flex items-center gap-3 mb-6 md:mb-0">
-        <i class='bx bxs-bell-ring'></i> Emergency & Law Enforcement
-      </h2>
-      <div class="md:col-span-2 text-gray-800 space-y-3 text-lg sm:text-xl">
-        <p><strong>Nationwide Hotline:</strong> <a href="tel:911" class="text-orange-500 hover:underline">911</a> (toll-free)</p>
-        <p><strong>PNP WCPC:</strong> <a href="tel:09197777377" class="text-orange-500 hover:underline">0919-777-7377</a> or <a href="tel:0285326690" class="text-orange-500 hover:underline">(02) 8532-6690</a></p>
-        <p><strong>NBI VAWCD Desk:</strong> <a href="tel:0285238231" class="text-orange-500 hover:underline">(02) 8523-8231 to 38</a> (local 6028)</p>
-        <p><strong>Local Police:</strong> Women & Children Protection Desk at your nearest precinct/barangay hall</p>
+      <!-- Emergency and Law Enforcement -->
+      <div class="bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl shadow-lg p-10 md:grid md:grid-cols-3 md:gap-8 items-start hover:scale-105 transition-transform duration-300">
+        <h2 class="text-2xl md:text-3xl font-bold text-orange-600 flex items-center gap-3 mb-6 md:mb-0">
+          <i class='bx bxs-bell-ring'></i> Emergency & Law Enforcement
+        </h2>
+        <div class="md:col-span-2 text-white space-y-3 text-lg sm:text-xl">
+          <p><strong>Nationwide Hotline:</strong> <a href="tel:911" class="text-orange-500 hover:underline">911</a> (toll-free)</p>
+          <p><strong>PNP WCPC:</strong> <a href="tel:09197777377" class="text-orange-500 hover:underline">0919-777-7377</a> or <a href="tel:0285326690" class="text-orange-500 hover:underline">(02) 8532-6690</a></p>
+          <p><strong>NBI VAWCD Desk:</strong> <a href="tel:0285238231" class="text-orange-500 hover:underline">(02) 8523-8231 to 38</a> (local 6028)</p>
+          <p><strong>Local Police:</strong> Women & Children Protection Desk at your nearest precinct/barangay hall</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Support and Legal Aid -->
-    <div class="bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl shadow-lg p-10 md:grid md:grid-cols-3 md:gap-8 items-start hover:scale-105 transition-transform duration-300">
-      <h2 class="text-2xl md:text-3xl font-bold text-orange-600 flex items-center gap-3 mb-6 md:mb-0">
-        <i class='bx bxs-briefcase'></i> Support & Legal Aid
-      </h2>
-      <div class="md:col-span-2 text-gray-800 space-y-3 text-lg sm:text-xl">
-        <p><strong>PCW - IAC on VAWC:</strong> <a href="tel:0287351654" class="text-orange-500 hover:underline">(02) 8735-1654</a> loc. 122 or <a href="tel:09178671907" class="text-orange-500 hover:underline">0917-867-1907</a></p>
-        <p><strong>PAO:</strong> Free legal aid <a href="tel:0289299436" class="text-orange-500 hover:underline">(02) 8929-9436</a> local 106, 107, 159</p>
-        <p><strong>DSWD:</strong> Community services & shelter <a href="tel:0287330014" class="text-orange-500 hover:underline">(02) 8733-0014 to 18</a> local 116</p>
-        <p><strong>Women's Crisis Center:</strong> <a href="tel:09284200859" class="text-orange-500 hover:underline">0928-420-0859</a> or <a href="tel:09995779631" class="text-orange-500 hover:underline">0999-577-9631</a></p>
+      <!-- Support and Legal Aid -->
+      <div class="bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl shadow-lg p-10 md:grid md:grid-cols-3 md:gap-8 items-start hover:scale-105 transition-transform duration-300">
+        <h2 class="text-2xl md:text-3xl font-bold text-orange-600 flex items-center gap-3 mb-6 md:mb-0">
+          <i class='bx bxs-briefcase'></i> Support & Legal Aid
+        </h2>
+        <div class="md:col-span-2 text-white space-y-3 text-lg sm:text-xl">
+          <p><strong>PCW - IAC on VAWC:</strong> <a href="tel:0287351654" class="text-orange-500 hover:underline">(02) 8735-1654</a> loc. 122 or <a href="tel:09178671907" class="text-orange-500 hover:underline">0917-867-1907</a></p>
+          <p><strong>PAO:</strong> Free legal aid <a href="tel:0289299436" class="text-orange-500 hover:underline">(02) 8929-9436</a> local 106, 107, 159</p>
+          <p><strong>DSWD:</strong> Community services & shelter <a href="tel:0287330014" class="text-orange-500 hover:underline">(02) 8733-0014 to 18</a> local 116</p>
+          <p><strong>Women's Crisis Center:</strong> <a href="tel:09284200859" class="text-orange-500 hover:underline">0928-420-0859</a> or <a href="tel:09995779631" class="text-orange-500 hover:underline">0999-577-9631</a></p>
+        </div>
       </div>
-    </div>
 
-    <!-- Medical and Mental Health Support -->
-    <div class="bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl shadow-lg p-10 md:grid md:grid-cols-3 md:gap-8 items-start hover:scale-105 transition-transform duration-300">
-      <h2 class="text-2xl md:text-3xl font-bold text-orange-600 flex items-center gap-3 mb-6 md:mb-0">
-        <i class='bx bxs-heart'></i> Medical & Mental Health
-      </h2>
-      <div class="md:col-span-2 text-gray-800 space-y-3 text-lg sm:text-xl">
-        <p><strong>DOH Hospitals WCPU:</strong> <a href="tel:0286517800" class="text-orange-500 hover:underline">(02) 8651-7800</a> local 1726-1730</p>
-        <p><strong>NCMH Crisis Hotline:</strong> <a href="tel:1553" class="text-orange-500 hover:underline">1553</a> (Luzon toll-free), <a href="tel:09178998727" class="text-orange-500 hover:underline">0917-899-8727</a> (Globe/TM), <a href="tel:09086392672" class="text-orange-500 hover:underline">0908-639-2672</a> (Smart/Sun/TNT)</p>
+      <!-- Medical and Mental Health Support -->
+      <div class="bg-white/20 backdrop-blur-lg border border-white/30 rounded-2xl shadow-lg p-10 md:grid md:grid-cols-3 md:gap-8 items-start hover:scale-105 transition-transform duration-300">
+        <h2 class="text-2xl md:text-3xl font-bold text-orange-600 flex items-center gap-3 mb-6 md:mb-0">
+          <i class='bx bxs-heart'></i> Medical & Mental Health
+        </h2>
+        <div class="md:col-span-2 text-white space-y-3 text-lg sm:text-xl">
+          <p><strong>DOH Hospitals WCPU:</strong> <a href="tel:0286517800" class="text-orange-500 hover:underline">(02) 8651-7800</a> local 1726-1730</p>
+          <p><strong>NCMH Crisis Hotline:</strong> <a href="tel:1553" class="text-orange-500 hover:underline">1553</a> (Luzon toll-free), <a href="tel:09178998727" class="text-orange-500 hover:underline">0917-899-8727</a> (Globe/TM), <a href="tel:09086392672" class="text-orange-500 hover:underline">0908-639-2672</a> (Smart/Sun/TNT)</p>
+        </div>
       </div>
-    </div>
 
+    </div>
+  </section>
+
+  <hr class="border-gray-300 my-8 w-[85%] mx-auto" />
+
+  <!-- ================= FEEDBACK SECTION ================= -->
+  <section class="w-full py-20 px-4 md:px-16 relative">
+    <h1 class="text-center text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-16">
+      Send Us Your Feedback
+    </h1>
+
+    <div class="max-w-[800px] mx-auto">
+      <form class="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-8 space-y-6">
+        
+        <!-- Name Field -->
+        <div class="flex flex-col">
+          <label for="name" class="text-lg font-semibold text-orange-600 mb-2">Name <span class="text-white">(Optional)</span></label>
+          <input type="text" id="name" name="name" placeholder="Your Name" 
+                class="rounded-lg border border-white/30 bg-white/20 text-orange-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400">
+        </div>
+
+        <!-- Feedback Field -->
+        <div class="flex flex-col">
+          <label for="feedback" class="text-lg font-semibold text-orange-600 mb-2">Feedback</label>
+          <textarea id="feedback" name="feedback" rows="6" placeholder="Write your feedback here..." 
+                    class="rounded-lg border border-white/30 bg-white/20 text-orange-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button type="submit" 
+                  class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300">
+            Submit Feedback
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
   </div>
-</section>
-
-<!-- ================= FEEDBACK SECTION ================= -->
-<section class="w-full py-20 px-4 md:px-16 bg-[#FFFBEA] relative">
-  <!-- Decorative lines -->
-  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[75rem] h-1 bg-black rounded-full"></div>
-
-  <h1 class="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-16">
-    Send Us Your Feedback
-  </h1>
-
-  <div class="max-w-[800px] mx-auto">
-    <form class="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-8 space-y-6">
-      
-      <!-- Name Field -->
-      <div class="flex flex-col">
-        <label for="name" class="text-lg font-semibold text-orange-600 mb-2">Name <span class="text-gray-500">(Optional)</span></label>
-        <input type="text" id="name" name="name" placeholder="Your Name" 
-               class="rounded-lg border border-white/30 bg-white/20 text-gray-800 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400">
-      </div>
-
-      <!-- Feedback Field -->
-      <div class="flex flex-col">
-        <label for="feedback" class="text-lg font-semibold text-orange-600 mb-2">Feedback</label>
-        <textarea id="feedback" name="feedback" rows="6" placeholder="Write your feedback here..." 
-                  class="rounded-lg border border-white/30 bg-white/20 text-gray-800 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="flex justify-center">
-        <button type="submit" 
-                class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300">
-          Submit Feedback
-        </button>
-      </div>
-
-    </form>
-  </div>
-</section>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
