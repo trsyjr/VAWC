@@ -6,6 +6,7 @@ html,
 body {
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  scroll-behavior: smooth;
 }
 
 /* Chrome, Edge, Safari */

@@ -14,14 +14,15 @@
 
 <body class="m-0 p-0 cursor-default overflow-y-scroll scrollbar-hide">
 
-<nav class="w-full px-4 md:px-6 py-4 absolute top-0 left-0 z-20 border-b border-white flex items-center justify-between">
+<nav class="w-full px-4 md:px-6 py-4 fixed top-0 left-0 z-50 border-b border-white 
+     flex items-center justify-between bg-black/50 backdrop-blur-md">
 
   <!-- LOGO OR PLACEHOLDER -->
   <div class="text-white font-bold text-xl">
     <!-- insert logo if needed -->
   </div>
 
-  <!-- HAMBURGER ICON (ANIMATED) -->
+  <!-- HAMBURGER ICON -->
   <button id="menuBtn" class="relative w-10 h-10 flex flex-col justify-center items-center md:hidden group">
     <span class="hamburger-line top-line"></span>
     <span class="hamburger-line middle-line"></span>
@@ -32,35 +33,47 @@
   <ul id="navLinks"
       class="hidden md:flex gap-6 lg:gap-10 text-white text-base lg:text-xl font-extralight tracking-widest 
              transition-all duration-300 my-5">
-    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Home</li>
-    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Cases</li>
-    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Contact</li>
-    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">Feedback</li>
+    
+    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">
+        <a href="#Home">Home</a>
+    </li>
+
+    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">
+        <a href="#Cases">Cases</a>
+    </li>
+
+    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">
+        <a href="#Contact">Contact</a>
+    </li>
+
+    <li class="cursor-pointer hover:text-green-300 hover:scale-110 transition duration-300">
+        <a href="#Feedback">Feedback</a>
+    </li>
+
   </ul>
+
+  <!-- MOBILE DROPDOWN MENU (FIXED + INSIDE NAV) -->
+  <ul id="mobileMenu" 
+      class="fixed top-16 left-0 w-full bg-black text-white flex-col hidden md:hidden p-6 gap-6 z-40">
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#Cases">Cases</a></li>
+    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#Feedback">Feedback</a></li>
+  </ul>
+
 </nav>
 
-<!-- MOBILE DROPDOWN MENU -->
-<ul id="mobileMenu"
-    class="hidden flex-col gap-6 text-white text-lg font-extralight tracking-widest
-           bg-black/60 backdrop-blur-lg px-6 py-6 absolute top-20 right-4 left-4
-           rounded-xl shadow-xl z-30 md:hidden transition-all duration-300">
-  <li class="cursor-pointer hover:text-green-300 transition duration-300">Home</li>
-  <li class="cursor-pointer hover:text-green-300 transition duration-300">Cases</li>
-  <li class="cursor-pointer hover:text-green-300 transition duration-300">Contact</li>
-  <li class="cursor-pointer hover:text-green-300 transition duration-300">Feedbck</li>
-</ul>
 
   <!-- HERO SECTION -->
   <section
     class="grid grid-cols-1 lg:grid-cols-2 items-center w-full text-white bg-cover bg-center pt-48 pb-10"
-    style="background-image: url('Assets/Cover.jpg'); min-height: 100vh;">
+    style="background-image: url('Assets/Cover.jpg'); min-height: 100vh;" id="Home">
   </section>
 
   <div class="global-bg">
 
     <!-- CASES SECTION -->
-    <!-- CASES SECTION -->
-  <section class="w-full py-16 px-4 md:px-10">
+  <section class="w-full py-16 px-4 md:px-10" id="Cases">
     <h1 class="text-center text-[2rem] md:text-[4rem] lg:text-[5rem] text-white font-bold my-10 md:my-16">
       "It Was Never About the Clothes"
     </h1>
@@ -546,7 +559,7 @@
   <hr class="border-gray-300 my-8 w-[85%] mx-auto" />
 
   <!-- ================= CONTACT HOTLINES SECTION ================= -->
-  <section class="w-full py-20 px-4 md:px-16 relative">
+  <section class="w-full py-20 px-4 md:px-16 relative" id="Contact">
     <h1 class="text-center text-white text-3xl sm:text-4xl md:text-[4rem] font-bold mb-16 mt-12">
       Contact Hotlines
     </h1>
@@ -596,7 +609,7 @@
   <hr class="border-gray-300 my-8 w-[85%] mx-auto" />
 
   <!-- ================= FEEDBACK SECTION ================= -->
-  <section class="w-full py-20 px-4 md:px-16 relative">
+  <section class="w-full py-20 px-4 md:px-16 relative" id="Feedback">
     <h1 class="text-center text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-16">
       Send Us Your Feedback
     </h1>
