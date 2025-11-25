@@ -1,5 +1,6 @@
 /* main.js - controls mobile menu, case accordion, and Swipers */
 
+/* ---------------- Mobile Menu ---------------- */
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -21,11 +22,11 @@ window.addEventListener("resize", () => {
   }
 });
 
-/* Accordion (cases) */
+/* ---------------- Accordion (Cases) ---------------- */
 const caseHeaders = document.querySelectorAll(".case-header");
 const caseContents = document.querySelectorAll(".case-content");
 
-// Ensure all case contents start closed with height 0
+// Start all closed
 caseContents.forEach(c => {
   c.style.height = "0px";
   c.style.overflow = "hidden";
@@ -35,13 +36,15 @@ caseContents.forEach(c => {
 
 caseHeaders.forEach(header => {
   header.addEventListener("click", () => {
+
     const target = header.getAttribute("data-target");
     const content = document.getElementById(`content-${target}`);
     const arrow = document.getElementById(`arrow-${target}`);
+    const desc = header.querySelector(".case-desc"); // <-- description span
 
     if (!content) return;
 
-    // Close all others
+    // Close all other cases
     caseContents.forEach(other => {
       if (other !== content) {
         other.style.height = "0px";
@@ -50,18 +53,22 @@ caseHeaders.forEach(header => {
         other.setAttribute("aria-hidden", "true");
       }
     });
+
     document.querySelectorAll(".case-header i").forEach(otherArrow => {
       if (otherArrow !== arrow) {
         otherArrow.classList.remove("rotate-180");
       }
     });
-    // Update aria-expanded on all headers
-    document.querySelectorAll(".case-header").forEach(h => h.setAttribute("aria-expanded", "false"));
 
-    // Toggle clicked folder
+    document.querySelectorAll(".case-header").forEach(h => 
+      h.setAttribute("aria-expanded", "false")
+    );
+
+    // Toggle the clicked case
     if (content.classList.contains("open")) {
-      // CLOSE
-      // set current height to allow transition
+      /* ---------- CLOSING ---------- */
+      desc?.classList.remove("hidden"); // <-- SHOW description
+
       content.style.height = content.scrollHeight + "px";
       requestAnimationFrame(() => {
         content.style.height = "0px";
@@ -71,8 +78,11 @@ caseHeaders.forEach(header => {
         arrow.classList.remove("rotate-180");
         header.setAttribute("aria-expanded", "false");
       });
+
     } else {
-      // OPEN
+      /* ---------- OPENING ---------- */
+      desc?.classList.add("hidden"); // <-- HIDE description
+
       content.style.height = content.scrollHeight + "px";
       content.style.opacity = "1";
       content.classList.add("open");
@@ -80,7 +90,7 @@ caseHeaders.forEach(header => {
       arrow.classList.add("rotate-180");
       header.setAttribute("aria-expanded", "true");
 
-      // After transition, set height to auto so new content size doesn't break layout
+      // change to auto height after expanding
       const setAutoHeight = function (e) {
         if (e.propertyName === "height" && content.classList.contains("open")) {
           content.style.height = "auto";
@@ -92,11 +102,11 @@ caseHeaders.forEach(header => {
   });
 });
 
-/* Initialize Swipers for cases 1..5, make pagination target the container's pagination element */
+/* ---------------- Swipers ---------------- */
 for (let i = 1; i <= 5; i++) {
   const selector = `.mySwiper${i}`;
   const paginationSelector = `.mySwiper${i} .swiper-pagination`;
-  // only init when element exists
+
   if (document.querySelector(selector)) {
     new Swiper(selector, {
       loop: true,
@@ -108,16 +118,11 @@ for (let i = 1; i <= 5; i++) {
         el: paginationSelector,
         clickable: true,
       },
-      // navigation not required here, uncomment if you add next/prev buttons
-      // navigation: {
-      //   nextEl: `${selector} .swiper-button-next`,
-      //   prevEl: `${selector} .swiper-button-prev`,
-      // },
     });
   }
 }
 
-/* Small dropdown helper left in case you need it (not used by the case accordion) */
+/* ---------------- Extra Dropdown Helper (Optional) ---------------- */
 function toggleDropdown(id) {
   const content = document.getElementById(`dropdown-${id}`);
   const icon = document.getElementById(`icon-${id}`);

@@ -82,11 +82,21 @@
 
       <!-- ========== CASE 1 ========== -->
       <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
-      <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
+        <button class="case-header w-full flex items-start justify-between p-1 md:p-3"
                 data-target="1" aria-expanded="false">
-        <span class="mx-5 text-2xl md:text-4xl font-bold text-white">Case 1</span>
-        <i id="arrow-1" class="bx bx-chevron-down text-3xl md:text-4xl transition-transform"></i>
-      </button>
+
+          <!-- Title + Description -->
+          <div class="flex flex-col text-left mx-5">
+            <span class="text-2xl md:text-4xl font-bold text-white">Case 1</span>
+            <span class="case-desc text-white/80 text-md lg:text-base mt-5">
+              Actress Maggie de la Riva was abducted and raped by four influential men in 1967. 
+              Despite attempts to silence her through intimidation and bribery, she pursued justice and testified publicly, a courageous act 
+              during a time when rape was heavily stigmatized. Her resilience led to the conviction of the perpetrators.
+            </span>
+          </div>
+
+          <i id="arrow-1" class="bx bx-chevron-down text-3xl md:text-4xl mt-1 transition-transform"></i>
+        </button>
 
         <!-- NOTE: removed Tailwind 'hidden' so CSS/JS height animation works -->
         <div id="content-1" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
@@ -96,15 +106,21 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div>
-              <p class="text-white text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
+              <p class="text-white text-sm mb-4">Date: 1967</p>
 
-              <div class="swiper mySwiper1 w-full max-h-80">
+              <div class="swiper mySwiper1 w-full max-h-full">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case1-1.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case1-1.jpg" class="h-[42rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case-1-2.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case-1-2.jpg" class="h-[42rem] object-contain" alt="">
+                  </div>
+                  <div class="swiper-slide flex justify-center items-center">
+                    <img src="Assets/Case1-3.jpg" class="h-[42rem] object-contain" alt="">
+                  </div>
+                  <div class="swiper-slide flex justify-center items-center">
+                    <img src="Assets/Case1-4.jpeg" class="h-[42rem] object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -112,28 +128,53 @@
             </div>
 
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <h3 class="text-2xl font-semibold mb-2 text-orange-300">Victim Name</h3>
+              <p class="text-white leading-relaxed text-4xl mb-5">Maggie de la Riva</p>
+
+              <h3 class="text-xl font-semibold mb-4 text-orange-300">Case Summary</h3>
               <p class="text-white leading-relaxed mb-4">
-                This is a sample description that appears in all cases.
+                In 1967, actress Maggie de la Riva was abducted at gunpoint and raped by four young men from wealthy and influential families. 
+                The perpetrators—Jaime José, Basilio Pineda, Rogelio Cañal, and Edgardo Aquino—believed their status would protect them from 
+                accountability. De la Riva was subjected to intense trauma and humiliation, and the case became highly publicized. Despite 
+                widespread victim-blaming attitudes during that era, she refused to be silenced. She bravely identified her attackers, rejected 
+                bribes and intimidation, and chose to testify in open court—a rare and courageous move for women at the time.
+                <br>
+                <br>
+                De la Riva’s resolve played a decisive role in securing justice. The accused were convicted, and in 1972, three of them were 
+                executed by electric chair, marking one of the most notable rape convictions in Philippine criminal history. The case highlighted 
+                the systemic bias favoring influential suspects and shed light on the strength required for survivors to pursue justice. Ultimately, 
+                Maggie de la Riva’s courage transformed her personal ordeal into a landmark case that challenged stigma and affirmed that no social 
+                status can place criminals above the law.
               </p>
 
               <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
-              <p class="text-white leading-relaxed mb-4">Aenean dapibus efficitur sem...</p>
-
-              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
-              <p class="text-white leading-relaxed">Suspendisse vel pellentesque sapien...</p>
+              <p class="text-white leading-relaxed mb-4">
+                Actress Maggie de la Riva was abducted and raped by four influential men in 1967. 
+                Despite attempts to silence her through intimidation and bribery, she pursued justice and testified publicly, a courageous act 
+                during a time when rape was heavily stigmatized. Her resilience led to the conviction of the perpetrators.
+              </p>
             </div>
 
           </div>
         </div>
       </div>
 
-      <!-- ========== CASE 2 ========== -->
+
+     <!-- ========== CASE 2 ========== -->
       <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
-        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
-                data-target="2" aria-expanded="false">
-          <h2 class="mx-5 text-2xl md:text-4xl font-bold text-white">Case 2</h2>
-          <i id="arrow-2" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
+        <button class="case-header w-full flex items-start justify-between p-1 md:p-3" data-target="2" aria-expanded="false">
+
+          <!-- Title + Description -->
+          <div class="flex flex-col text-left mx-5">
+            <span class="text-2xl md:text-4xl font-bold text-white">Case 2</span>
+            <span class="case-desc text-white/80 text-md lg:text-base mt-5">
+              Christine, a 16-year-old student from Lapu-Lapu City, was found murdered in a vacant lot after being lured out through social media. 
+              Investigators confirmed she had been sexually assaulted. Her case shook the nation and highlighted the vulnerability of young women 
+              to predatory behavior online.
+            </span>
+          </div>
+
+          <i id="arrow-2" class="bx bx-chevron-down text-3xl md:text-4xl mt-1 transition-transform"></i>
         </button>
 
         <div id="content-2" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
@@ -142,46 +183,73 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
+            <!-- LEFT SIDE -->
             <div>
-              <p class="text-white text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
+              <p class="text-white text-sm mb-4">Date: 2019</p>
 
-              <div class="swiper mySwiper2 w-full max-h-80">
+              <div class="swiper mySwiper2 w-full max-h-full">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case2-1.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case2-1.jpg" class="h-[40rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case2-2.webp" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case2-2.webp" class="h-[40rem] object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
 
+            <!-- RIGHT SIDE -->
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+
+              <h3 class="text-2xl font-semibold mb-2 text-orange-300">Victim Name</h3>
+              <p class="text-white leading-relaxed text-4xl mb-5">Christine Lee Silawan</p>
+
+              <h3 class="text-xl font-semibold mb-4 text-orange-300">Case Summary</h3>
               <p class="text-white leading-relaxed mb-4">
-                Sample description text for Case 2.
+                "In March 2019, Christine Lee Silawan, a 16-year-old student from Lapu-Lapu City, Cebu, was found brutally murdered in a vacant 
+                lot after being lured out through social media. Investigators reported that she had been deceived by someone posing as another 
+                person online, a tactic known as catfishing. Her body showed signs of severe violence, including indications of sexual assault, 
+                shocking both the local community and the entire nation. The brutality of the crime, combined with the fact that she was a young 
+                minor, intensified public outcry and calls for justice.
+                <br>
+                <br>
+                The investigation later revealed that a teenage suspect—her former boyfriend—was allegedly behind the crime, with police tracing 
+                his involvement through digital footprints and chat messages. Christine’s death sparked nationwide conversations about the dangers 
+                of online manipulation, the vulnerability of young women to predatory behavior on social media, and the urgent need for stronger 
+                protections for minors in digital spaces. Above all, her case served as a painful reminder of how online interactions can escalate 
+                into real-world harm, emphasizing the importance of digital safety and early intervention to protect young people."
               </p>
 
               <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
-              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
+              <p class="text-white leading-relaxed mb-4">
+               Christine, a 16-year-old student from Lapu-Lapu City, was found murdered in a vacant lot after being lured out through social media. 
+               Investigators confirmed she had been sexually assaulted. Her case shook the nation and highlighted the vulnerability of young women to 
+               predatory behavior online.
+              </p>
 
-              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
-              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
             </div>
 
           </div>
-
         </div>
       </div>
 
       <!-- ========== CASE 3 ========== -->
       <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
-        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
-                data-target="3" aria-expanded="false">
-          <h2 class="mx-5 md:text-4xl font-bold text-white">Case 3</h2>
-          <i id="arrow-3" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
+        <button class="case-header w-full flex items-start justify-between p-1 md:p-3" data-target="3" aria-expanded="false">
+
+          <!-- Title + Description -->
+          <div class="flex flex-col text-left mx-5">
+            <span class="text-2xl md:text-4xl font-bold text-white">Case 3</span>
+            <span class="case-desc text-white/80 text-md lg:text-base mt-5">
+              Seventeen-year-old Carmela Vizconde was raped and murdered along with her mother and sister inside their home in Parañaque. 
+              The brutality of the crime and the long, controversial legal saga exposed weaknesses in the judicial system. Carmela’s case remains 
+              one of the most discussed VAW cases in Philippine history.
+            </span>
+          </div>
+
+          <i id="arrow-3" class="bx bx-chevron-down text-3xl md:text-4xl mt-1 transition-transform"></i>
         </button>
 
         <div id="content-3" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
@@ -190,50 +258,80 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
+            <!-- LEFT SIDE -->
             <div>
-              <p class="text-white text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
+              <p class="text-white text-sm mb-4">Date: 1991</p>
 
-              <div class="swiper mySwiper3 w-full max-h-80">
+              <div class="swiper mySwiper3 w-full max-h-full">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case3-1.png" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case3-1.png" class="h-[41rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case3-2.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case3-2.jpg" class="h-[41rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case3-3.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case3-3.jpg" class="h-[41rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case3-4.jpeg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case3-4.jpeg" class="h-[41rem] object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
 
+            <!-- RIGHT SIDE -->
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
-              <p class="text-white leading-relaxed mb-4">Sample text for Case 3.</p>
+
+              <h3 class="text-2xl font-semibold mb-2 text-orange-300">Victim Name</h3>
+              <p class="text-white leading-relaxed text-4xl mb-5">Carmela Vizconde</p>
+
+              <h3 class="text-xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">
+                The Vizconde murders occurred in 1991 in Parañaque, Philippines, when seventeen-year-old Carmela Vizconde, along with her 
+                mother, Estrellita, and younger sister, Jennifer, were brutally attacked inside their home. Carmela was raped and murdered, 
+                while her mother and sister were also killed in the same violent incident. The crime shocked the nation due to its extreme 
+                brutality and the apparent targeting of an entire family. The case quickly drew massive media attention and became emblematic 
+                of violence against women and the broader issue of family-targeted crimes.
+                <br>
+                <br>
+                The legal proceedings following the murders were highly controversial and spanned over a decade, highlighting weaknesses in 
+                the judicial process, including issues of evidence handling, witness credibility, and procedural delays. Initially, several 
+                accused individuals were convicted, but subsequent appeals and retrials brought further confusion and public debate. The 
+                Vizconde case remains a pivotal reference in discussions on criminal justice reform, victim protection, and the societal 
+                response to violence against women in the Philippines, underscoring the urgent need for an efficient and transparent legal 
+                system."
+              </p>
 
               <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
-              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
+              <p class="text-white leading-relaxed mb-4">
+                Seventeen-year-old Carmela Vizconde was raped and murdered along with her mother and sister inside their home in Parañaque. 
+                The brutality of the crime and the long, controversial legal saga exposed weaknesses in the judicial system. Carmela’s case 
+                remains one of the most discussed VAW cases in Philippine history.
+              </p>
 
-              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
-              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
             </div>
 
           </div>
-
         </div>
       </div>
 
       <!-- ========== CASE 4 ========== -->
       <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
-        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
-                data-target="4" aria-expanded="false">
-          <h2 class="mx-5 md:text-4xl font-bold text-white">Case 4</h2>
-          <i id="arrow-4" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
+        <button class="case-header w-full flex items-start justify-between p-1 md:p-3" data-target="4" aria-expanded="false">
+
+          <!-- Title + Description -->
+          <div class="flex flex-col text-left mx-5">
+            <span class="text-2xl md:text-4xl font-bold text-white">Case 4</span>
+            <span class="case-desc text-white/80 text-md lg:text-base mt-5">
+              Jennifer Laude, a transgender Filipina, was killed inside a motel in Olongapo by a U.S. Marine who violently attacked her upon 
+              learning her identity. Her death spotlighted transphobic violence and the vulnerability of LGBTQ+ individuals to hate-motivated 
+              crimes.
+            </span>
+          </div>
+
+          <i id="arrow-4" class="bx bx-chevron-down text-3xl md:text-4xl mt-1 transition-transform"></i>
         </button>
 
         <div id="content-4" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
@@ -242,44 +340,70 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
+            <!-- LEFT SIDE -->
             <div>
-              <p class="text-white text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
+              <p class="text-white text-sm mb-4">Date: 2014</p>
 
-              <div class="swiper mySwiper4 w-full max-h-80">
+              <div class="swiper mySwiper4 w-full max-h-full">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case4-1.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case4-1.jpg" class="h-[40rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case4-2.webp" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case4-2.webp" class="h-[40rem] object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
 
+            <!-- RIGHT SIDE -->
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
-              <p class="text-white leading-relaxed mb-4">Sample text for Case 4.</p>
+
+              <h3 class="text-2xl font-semibold mb-2 text-orange-300">Victim Name</h3>
+              <p class="text-white leading-relaxed text-4xl mb-5">Jennifer Laude Case</p>
+
+              <h3 class="text-xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">
+                The Jennifer Laude case occurred in 2014 in Olongapo City, Philippines, when Jennifer Laude, a transgender Filipina, was brutally 
+                killed inside a motel by a U.S. Marine. The perpetrator reportedly attacked her upon discovering her gender identity, leading to 
+                her death. This heinous act brought national and international attention to the dangers faced by transgender individuals and 
+                highlighted the pervasive issue of transphobic violence in society. Jennifer’s death became a rallying point for advocacy on LGBTQ+ 
+                rights, justice for hate crimes, and the broader struggle against discrimination and violence targeting marginalized communities.
+                <br>
+                <br>
+                The legal proceedings surrounding the case were closely followed, with debates on jurisdiction, accountability of foreign military 
+                personnel, and the adequacy of protective measures for vulnerable populations. Jennifer Laude’s story underscored the urgent need for 
+                societal recognition of LGBTQ+ rights and protection against hate-motivated crimes, prompting calls for justice, equality, and systemic 
+                reforms to safeguard the lives and dignity of transgender and other marginalized individuals."
+              </p>
 
               <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
-              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
-
-              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
-              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
+              <p class="text-white leading-relaxed mb-4">
+                Jennifer Laude, a transgender Filipina, was killed inside a motel in Olongapo by a U.S. Marine who violently attacked her upon 
+                learning her identity. Her death spotlighted transphobic violence and the vulnerability of LGBTQ+ individuals to hate-motivated 
+                crimes.
+              </p>
             </div>
 
           </div>
-
         </div>
       </div>
 
       <!-- ========== CASE 5 ========== -->
       <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
-        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
-                data-target="5" aria-expanded="false">
-          <h2 class="mx-5 md:text-4xl font-bold text-white">Case 5</h2>
-          <i id="arrow-5" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
+        <button class="case-header w-full flex items-start justify-between p-1 md:p-3" data-target="5" aria-expanded="false">
+
+          <!-- Title + Description -->
+          <div class="flex flex-col text-left mx-5">
+            <span class="text-2xl md:text-4xl font-bold text-white">Case 5</span>
+            <span class="case-desc text-white/80 text-md lg:text-base mt-5">
+              University student Eileen Sarmenta was abducted, raped, and murdered by the group of then-Mayor Antonio Sanchez. Court documents 
+              detailed the premeditated nature of the crime. Her story became a symbol of the fight against abuse of power.
+            </span>
+          </div>
+
+          <i id="arrow-5" class="bx bx-chevron-down text-3xl md:text-4xl mt-1 transition-transform"></i>
         </button>
 
         <div id="content-5" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
@@ -288,44 +412,73 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
+            <!-- LEFT SIDE -->
             <div>
-              <p class="text-white text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
+              <p class="text-white text-sm mb-4">Date: 1993</p>
 
-              <div class="swiper mySwiper5 w-full max-h-80">
+              <div class="swiper mySwiper5 w-full max-h-full">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case5-1.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case5-1.jpg" class="h-[40rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case5-2.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case5-2.jpg" class="h-[40rem] object-contain" alt="">
+                  </div>
+                  <div class="swiper-slide flex justify-center items-center">
+                    <img src="Assets/Case5-3.webp" class="h-[40rem] object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
 
+            <!-- RIGHT SIDE -->
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
-              <p class="text-white leading-relaxed mb-4">Sample text for Case 5.</p>
+
+              <h3 class="text-2xl font-semibold mb-2 text-orange-300">Victim Name</h3>
+              <p class="text-white leading-relaxed text-4xl mb-5">Eileen Sarmenta & Allan Gomez</p>
+
+              <h3 class="text-xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">
+                In 1993, University of the Philippines student Eileen Sarmenta and her friend Allan Gomez were abducted, raped, and murdered by 
+                a group led by then-Calauan Mayor Antonio Sanchez and his cohorts. The crime was premeditated and marked by extreme brutality, 
+                with court documents revealing a chilling abuse of power and disregard for human life. Eileen Sarmenta’s abduction and assault, 
+                followed by the murder of both victims, shocked the nation and highlighted the dangers posed by influential individuals exploiting 
+                their authority to commit heinous acts.
+                <br>
+                <br>
+                The case became a landmark in the Philippines for its focus on accountability and the fight against impunity. After lengthy trials, 
+                Antonio Sanchez and his accomplices were convicted, sending a strong message about the consequences of abusing power. The story of 
+                Eileen Sarmenta and Allan Gomez remains a powerful symbol in advocating for women’s rights, protection of the vulnerable, and 
+                raising awareness against violence perpetrated by those in positions of authority."
+              </p>
 
               <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
-              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
-
-              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
-              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
+              <p class="text-white leading-relaxed mb-4">
+                University student Eileen Sarmenta was abducted, raped, and murdered by the group of then-Mayor Antonio Sanchez. Court documents 
+                detailed the premeditated nature of the crime. Her story became a symbol of the fight against abuse of power.
+              </p>
             </div>
 
           </div>
-
         </div>
       </div>
 
       <!-- ========== CASE 6 ========== -->
       <div class="case-folder bg-white/30 backdrop-blur-xl border border-orange-200/40 rounded-xl shadow-xl shadow-orange-300/20 hover:bg-white/40 transition duration-300">
-        <button class="case-header w-full flex items-center justify-between p-1 md:p-3"
-                data-target="6" aria-expanded="false">
-          <h2 class="mx-5 md:text-4xl font-bold text-white">Case 6</h2>
-          <i id="arrow-5" class="bx bx-chevron-down text-4xl transition-transform duration-300"></i>
+        <button class="case-header w-full flex items-start justify-between p-1 md:p-3" data-target="6" aria-expanded="false">
+
+          <!-- Title + Description -->
+          <div class="flex flex-col text-left mx-5">
+            <span class="text-2xl md:text-4xl font-bold text-white">Case 6</span>
+            <span class="case-desc text-white/80 text-md lg:text-base mt-5">
+             In a gruesome home invasion in Bulacan, a mother and daughter were sexually assaulted and killed along with several family members. 
+             The case shocked the country and exposed how gender-based violence can occur even in supposedly safe environments like the family 
+             home.
+            </span>
+          </div>
+
+          <i id="arrow-6" class="bx bx-chevron-down text-3xl md:text-4xl mt-1 transition-transform"></i>
         </button>
 
         <div id="content-6" class="case-content px-4 md:px-8 pb-10 pt-0" aria-hidden="true">
@@ -334,35 +487,52 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
+            <!-- LEFT SIDE -->
             <div>
-              <p class="text-white text-sm mb-4">Date: MM DD, YYYY | Type: Report</p>
+              <p class="text-white text-sm mb-4">Date: 2017</p>
 
-              <div class="swiper mySwiper5 w-full max-h-80">
+              <div class="swiper mySwiper5 w-full max-h-full">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case5-1.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case6-1.jpeg" class="h-[35rem] object-contain" alt="">
                   </div>
                   <div class="swiper-slide flex justify-center items-center">
-                    <img src="Assets/Case5-2.jpg" class="h-72 object-contain" alt="">
+                    <img src="Assets/Case6-2.jpeg" class="h-[35rem] object-contain" alt="">
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
 
+            <!-- RIGHT SIDE -->
             <div class="p-2 md:p-4">
-              <h3 class="text-2xl font-semibold mb-4 text-orange-300">Case Summary</h3>
-              <p class="text-white leading-relaxed mb-4">Sample text for Case 5.</p>
+
+              <h3 class="text-2xl font-semibold mb-2 text-orange-300">Incident</h3>
+              <p class="text-white leading-relaxed text-4xl mb-5">Bulacan Massacre</p>
+
+              <h3 class="text-xl font-semibold mb-4 text-orange-300">Case Summary</h3>
+              <p class="text-white leading-relaxed mb-4">
+                "The Bulacan Massacre occurred in 2017 when a family in Bulacan became the target of a brutal home invasion. During the attack, a 
+                mother and her daughter were sexually assaulted and murdered, along with several other family members. The extreme violence in what 
+                was considered a safe family environment sent shockwaves across the nation and highlighted the grave vulnerability of women and 
+                children even within the home. The case drew attention to the pervasive risks of gender-based violence and the urgent need for 
+                stronger protective measures for families.
+                <br>
+                <br>
+                The incident exposed gaps in community safety and law enforcement response, prompting discussions on preventive strategies against 
+                such violent crimes. It remains a chilling reminder that violence against women can happen anywhere and underscores the importance 
+                of justice, accountability, and public awareness to protect the most vulnerable members of society."
+              </p>
 
               <h3 class="text-xl font-semibold mb-2 text-orange-300">Details</h3>
-              <p class="text-white leading-relaxed mb-4">Lorem ipsum dolor sit amet...</p>
-
-              <h3 class="text-xl font-semibold mb-2 text-orange-300">Action Taken</h3>
-              <p class="text-white leading-relaxed">Nulla facilisi. Donec dignissim...</p>
+              <p class="text-white leading-relaxed mb-4">
+                In a gruesome home invasion in Bulacan, a mother and daughter were sexually assaulted and killed along with several family members. 
+                The case shocked the country and exposed how gender-based violence can occur even in supposedly safe environments like the family 
+                home.
+              </p>
             </div>
 
           </div>
-
         </div>
       </div>
 
