@@ -33,7 +33,7 @@ body {
 .bottom-line { transform: translateY(8px); }
 
 .global-bg {
-  background-image: url('Assets/backdrop.png');
+  background-image: url('Assets/backdrop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,4 +101,15 @@ body {
 /* rotate class for arrow transform (using Tailwind utility 'rotate-180' would do same) */
 .rotate-180 {
   transform: rotate(180deg) !important;
+}
+
+.modal-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+.modal-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear;
 }
