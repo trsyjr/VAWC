@@ -96,11 +96,6 @@ caseHeaders.forEach(header => {
   });
 });
 
-// Prevent clicks on description from toggling the case
-document.querySelectorAll(".case-desc").forEach(desc => {
-  desc.addEventListener("click", e => e.stopPropagation());
-});
-
 
 /* ---------------- Swipers ---------------- */
 for (let i = 1; i <= 10; i++) {
