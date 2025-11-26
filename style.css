@@ -66,17 +66,15 @@ body {
 /* FINAL accordion animation */
 /* removed 'hidden' usage — rely on height/opacity transitions */
 .case-content {
+  max-height: 0;
   overflow: hidden;
-  height: 0;
   opacity: 0;
-  padding-top: 0 !important;
-  transition: height 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .case-content.open {
+  max-height: 1000px; /* adjust if needed */
   opacity: 1;
-  padding-top: 1rem !important;
-  /* height will be set dynamically in JS */
 }
 
 /* Remove unused keyframes unless needed elsewhere */

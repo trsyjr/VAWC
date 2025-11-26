@@ -26,81 +26,81 @@ window.addEventListener("resize", () => {
 const caseHeaders = document.querySelectorAll(".case-header");
 const caseContents = document.querySelectorAll(".case-content");
 
-// Start all closed
 caseContents.forEach(c => {
-  c.style.height = "0px";
+  c.style.maxHeight = "0px";
   c.style.overflow = "hidden";
   c.style.opacity = "0";
+  c.classList.remove("open");
   c.setAttribute("aria-hidden", "true");
 });
 
 caseHeaders.forEach(header => {
   header.addEventListener("click", () => {
-
     const target = header.getAttribute("data-target");
     const content = document.getElementById(`content-${target}`);
     const arrow = document.getElementById(`arrow-${target}`);
-    const desc = header.querySelector(".case-desc"); // <-- description span
+    const desc = header.querySelector(".case-desc");
 
     if (!content) return;
+    const isOpen = content.classList.contains("open");
 
-    // Close all other cases
-    caseContents.forEach(other => {
-      if (other !== content) {
-        other.style.height = "0px";
-        other.classList.remove("open");
-        other.style.opacity = "0";
-        other.setAttribute("aria-hidden", "true");
+    // Close all others
+    caseContents.forEach(c => {
+      if (c !== content) {
+        c.style.maxHeight = "0px";
+        c.style.opacity = "0";
+        c.classList.remove("open");
+        c.setAttribute("aria-hidden", "true");
       }
     });
 
-    document.querySelectorAll(".case-header i").forEach(otherArrow => {
-      if (otherArrow !== arrow) {
-        otherArrow.classList.remove("rotate-180");
-      }
+    document.querySelectorAll(".case-header i").forEach(a => a.classList.remove("rotate-180"));
+    caseHeaders.forEach(h => {
+      h.setAttribute("aria-expanded", "false");
+      h.querySelector(".case-desc")?.classList.remove("hidden");
     });
 
-    document.querySelectorAll(".case-header").forEach(h => 
-      h.setAttribute("aria-expanded", "false")
-    );
-
-    // Toggle the clicked case
-    if (content.classList.contains("open")) {
-      /* ---------- CLOSING ---------- */
-      desc?.classList.remove("hidden"); // <-- SHOW description
-
-      content.style.height = content.scrollHeight + "px";
-      requestAnimationFrame(() => {
-        content.style.height = "0px";
-        content.style.opacity = "0";
-        content.classList.remove("open");
-        content.setAttribute("aria-hidden", "true");
-        arrow.classList.remove("rotate-180");
-        header.setAttribute("aria-expanded", "false");
-      });
-
-    } else {
-      /* ---------- OPENING ---------- */
-      desc?.classList.add("hidden"); // <-- HIDE description
-
-      content.style.height = content.scrollHeight + "px";
+    if (!isOpen) {
+      // Open
+      desc?.classList.add("hidden");
+      content.style.maxHeight = content.scrollHeight + "px";
       content.style.opacity = "1";
       content.classList.add("open");
       content.setAttribute("aria-hidden", "false");
       arrow.classList.add("rotate-180");
       header.setAttribute("aria-expanded", "true");
 
-      // change to auto height after expanding
-      const setAutoHeight = function (e) {
-        if (e.propertyName === "height" && content.classList.contains("open")) {
-          content.style.height = "auto";
+      // Smoothly scroll header into view
+      header.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // After transition, set maxHeight to auto
+      content.addEventListener("transitionend", function setAutoHeight(e) {
+        if (e.propertyName === "max-height") {
+          content.style.maxHeight = "none";
+          content.removeEventListener("transitionend", setAutoHeight);
         }
-        content.removeEventListener("transitionend", setAutoHeight);
-      };
-      content.addEventListener("transitionend", setAutoHeight);
+      });
+    } else {
+      // Close
+      content.style.maxHeight = content.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        content.style.maxHeight = "0px";
+        content.style.opacity = "0";
+        content.classList.remove("open");
+        content.setAttribute("aria-hidden", "true");
+        arrow.classList.remove("rotate-180");
+        header.setAttribute("aria-expanded", "false");
+        desc?.classList.remove("hidden");
+      });
     }
   });
 });
+
+// Prevent clicks on description from toggling the case
+document.querySelectorAll(".case-desc").forEach(desc => {
+  desc.addEventListener("click", e => e.stopPropagation());
+});
+
 
 /* ---------------- Swipers ---------------- */
 for (let i = 1; i <= 10; i++) {
