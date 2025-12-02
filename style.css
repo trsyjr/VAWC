@@ -16,6 +16,8 @@ body {
   height: 0 !important;
 }
 
+.tw-hidden { display: none !important; }
+
 /* Base line style for hamburger */
 .hamburger-line {
   width: 28px;

@@ -64,6 +64,38 @@
 
 </nav>
 
+  <!-- Trigger Warning Modal -->
+<div id="trigger-modal" class="modal-hidden fixed inset-0 z-[9999] flex items-center justify-center p-4">
+    
+    <!-- Overlay -->
+    <div id="trigger-overlay" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+    <!-- Content Box -->
+    <div id="trigger-box"
+        class="bg-white/5 backdrop-blur-xl border border-orange-500/40 rounded-3xl shadow-2xl 
+               p-6 md:p-10 w-full max-w-lg lg:max-w-3xl z-10 relative scale-95 opacity-0 
+               transition-all duration-300"
+        style="background-image: url('Assets/BG SITES.jpg');
+               background-size: cover;
+               background-position: center;">
+        
+        <!-- Trigger Warning Text -->
+        <h3 class="text-3xl md:text-4xl font-extrabold text-yellow-300 text-center mb-8">
+            ⚠️ Trigger Warning:<br><br>This activity references sensitive content related to VAW.
+        </h3>
+
+        <!-- Continue Button -->
+        <div class="text-center">
+            <button id="trigger-close-btn" 
+                class="px-8 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white 
+                       text-xl font-bold shadow-lg transition">
+                Continue
+            </button>
+        </div>
+
+    </div>
+</div>
+
 
   <!-- HERO SECTION -->
   <section

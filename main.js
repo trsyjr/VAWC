@@ -284,5 +284,45 @@ document.getElementById("feedbackForm").addEventListener("submit", function(even
   });
 });
 
+/* ==================== Trigger Warning Modal (Separate System) ==================== */
+
+const triggerModal = document.getElementById("trigger-modal");
+const triggerOverlay = document.getElementById("trigger-overlay");
+const triggerBox = document.getElementById("trigger-box");
+const triggerCloseBtn = document.getElementById("trigger-close-btn");
+
+// Show modal on page load
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        triggerModal.classList.remove("modal-hidden");
+        triggerModal.classList.add("modal-visible");
+
+        setTimeout(() => {
+            triggerBox.classList.remove("scale-95", "opacity-0");
+            triggerBox.classList.add("scale-100", "opacity-100");
+        }, 20);
+    }, 300);
+});
+
+// Close modal function
+function closeTriggerModal() {
+    triggerBox.classList.remove("scale-100", "opacity-100");
+    triggerBox.classList.add("scale-95", "opacity-0");
+
+    setTimeout(() => {
+        triggerModal.classList.remove("modal-visible");
+        triggerModal.classList.add("modal-hidden");
+    }, 250);
+}
+
+// Close actions
+triggerCloseBtn.addEventListener("click", closeTriggerModal);
+triggerOverlay.addEventListener("click", closeTriggerModal);
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && triggerModal.classList.contains("modal-visible")) {
+        closeTriggerModal();
+    }
+});
 
         
