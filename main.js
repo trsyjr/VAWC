@@ -1,4 +1,18 @@
-/* main.js - controls mobile menu, case accordion, and Swipers */
+/* main.js - controls mobile menu, case accordion, Swipers and IP */
+
+/* -------- Website View Logger -------- */
+(function logView() {
+  fetch("https://script.google.com/a/macros/dswd.gov.ph/s/AKfycbwi8vRAOlYHx5J2rDKD7KgNmiuuGxFqOoTCXZp1x8hc4PZ_zkx06yHLTjaN-ts1bV_t/exec", {
+    method: "POST",
+    mode: "no-cors",
+    body: JSON.stringify({
+      type: "viewLog",
+      page: window.location.href,
+      userAgent: navigator.userAgent
+    })
+  });
+})();
+
 
 /* ---------------- Mobile Menu ---------------- */
 const menuBtn = document.getElementById("menuBtn");
